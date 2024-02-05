@@ -18,8 +18,10 @@ Source : https://ianclemence.medium.com/setting-up-laravel-project-using-docker-
 ## Et on active Sail
 ```./vendor/bin/sail up```
 ## On va passer a l'installation de Breeze qui va nous permettre de géré l'authentification
-```docker run --rm --interactive --tty --volume $PWD:/app composer require --dev laravel/breeze```
-```./vendor/bin/sail artisan breeze:install```
+```
+docker run --rm --interactive --tty --volume $PWD:/app composer require --dev laravel/breeze
+./vendor/bin/sail artisan breeze:install
+```
 ## Une fois l'installation terminé, 
 ```sail artisan migrate```
 ## J'ai ensuite décidé d'installer directement npm car j'ai rencontré des problème
