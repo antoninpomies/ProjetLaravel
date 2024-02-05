@@ -11,3 +11,10 @@ Source : https://ianclemence.medium.com/setting-up-laravel-project-using-docker-
 ```wsl```
 ## On se retrouve donc dans une machine tournant sur debian. On va commencer par faire les mises à jour et installer curl
 ```sudo apt update && apt upgrade && apt install curl```
+## On va ensuite crée le répertoire du projet grâce a la commande suivante
+```curl -s https://laravel.build/ProjetLaravel | bash```
+## On se rend dans le répertoire crée 
+```cd ProjetLaravel```
+## Et on active Sail
+```./vendor/bin/sail up```
+##
