@@ -17,4 +17,19 @@ Source : https://ianclemence.medium.com/setting-up-laravel-project-using-docker-
 ```cd ProjetLaravel```
 ## Et on active Sail
 ```./vendor/bin/sail up```
-##
+## On va passer a l'installation de Breeze qui va nous permettre de géré l'authentification
+```docker run --rm --interactive --tty --volume $PWD:/app composer require --dev laravel/breeze```
+```./vendor/bin/sail artisan breeze:install```
+## Une fois l'installation terminé, 
+```sail artisan migrate```
+## J'ai ensuite décidé d'installer directement npm car j'ai rencontré des problème
+```apt install npm```
+## Cela m'a donc permis de faire les deux commande suivante
+```sail npm install```
+```sail npm run dev```
+## Une fois les commandes faite, nous avons fini l'installation de laravel
+---
+# Lancement de la création du blog minimalist
+Source : https://github.com/nicolas-sanch/creer-minimalist-blog
+
+J'ai donc copier tout les fichier et trié au bon endroit et après quelques heures de débugage nous obtenons sur l'adresse http://localhost deux bouton un pour ce connecter et un pour s'enregistrer
